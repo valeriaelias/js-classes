@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  	<title>Cadastro Candidato | Jobs4You - Programação Orientada a Objetos</title>
+  	<meta charset="UTF-8">
+  	<link rel="stylesheet" type="text/css" href="../css/css.css">
+	<script src="../js/jquery-min.js"></script>
+	<script src="js/scroo.js"></script>
+	<script>
+		$(main);  // carrega jquery
+		function main(){
+			$("#cadCand").click(candidato.cadastrar);
+		}
+	</script>
+</head>
+
+<body>
+  <!-- MENU -->
+    <nav>
+      <ul>
+        <li><a href="../agencia/index.html">Agência de Empregos</a></li>
+        <li><a href="../fibonacci/index.html">Fibonacci</a></li>
+        <li><a href="../index.html">Início</a></li>          
+      </ul>
+    </nav>
+   <!-- // MENU -->
+	
+	<div id="container">
+		<h1>
+	        Cadastro Candidato
+	        <span>Jobs4You - POO</span>
+	    </h1>
+
+	    <div id="resultado">
+		    <form name="candidato">
+		    	<p>
+					Nome:<br>
+					<input type="text" name="nome" class="campoTexto" id="nome" style="width: 450px;">
+				</p>
+				
+				<p>
+					Sexo:<br>
+					<span class="campoTexto">
+						<input type="radio" name="sexo" value="f"><label>Feminino</label>
+						<input type="radio" name="sexo" value="m"><label>Masculino</label>
+					</span>
+				</p>
+				
+				<p>
+					Idade:<br>
+					<input type="text" name="idade" class="campoTexto" id="idade" style="width: 80px;">
+				</p>
+				
+				<p>
+					Pretensão Salarial:<br>
+					<input type="text" name="pretensao" class="campoTexto" id="pretensao">
+				</p>
+
+				<br><hr><br>
+
+				<p style="width: 200px; float: left;">
+					Login:<br>
+					<input type="text" name="login" class="campoTexto" id="login" style="width: 170px;">
+				</p>
+
+				<p style="width: 140px; float: left;">
+					Senha:<br>
+					<input type="password" name="senha" class="campoTexto" id="senha" style="width: 110px;" maxlength="6">
+				</p>
+
+				<p style="width: 140px; float: left;">
+					Re-Senha:<br>
+					<input type="password" name="resenha" class="campoTexto" id="resenha" style="width: 110px;" maxlength="6">
+				</p>
+
+				<div class="clearfix"></div>
+
+				<hr><br><br>
+
+				<input type="button" value="cadastrar" class="btForm" id="cadCand">
+		    </form>
+	    </div>
+	    <br><hr><br>
+	    <div id="mostraTime"></div>
+  </div>
+	
+	<!-- RODAPE -->
+	<footer>
+	    <p><strong>TP Engenharia de Software</strong></p>
+	    <p>
+	      <em>Alunos:</em><br>
+	      Hewerton Ribeiro<br>
+	      Ely Assumpção<br>
+	      Valéria Chaves<br>
+	      Vanessa Fortuna
+	    </p>
+  	</footer>
+  	<!-- // RODAPE -->
+</body>
+</html>

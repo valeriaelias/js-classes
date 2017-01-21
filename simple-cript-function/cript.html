@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+<head>
+	<script>
+		function Criptografar() {
+			var nome = document.getElementById("nome").value;
+			alert(nome.length);
+			var r = 'abcdefghijklmnopqrstuvwxyz';
+			var chave = '';
+			var letraChave = '';
+			var codeXor = [];
+			
+			for (var i=0; i<nome.length; i++) { 
+				strChave = r.charAt(Math.floor(Math.random()*r.length));
+				strNome = nome[i];
+				codeStrNome = strNome.charCodeAt();
+				codeStrChave = strChave.charCodeAt();
+				alert("String Nome: "+strNome+" ("+ codeStrNome +")");
+				alert("String Chave: "+strChave+" ("+ codeStrChave +")");
+				codeStrXor = codeStrNome ^ codeStrChave;
+				alert("XOR: "+codeStrXor);
+				
+				codeXor[i] = codeStrXor;
+				chave += strChave;
+			}
+			alert("nome: "+nome);
+			alert("chave: "+chave);
+			 
+			for (var y in codeXor) { 
+				alert("volta: "+codeXor[y]+" - "+String.fromCharCode(codeXor[y]));
+			}			
+			
+			return false;
+		}
+	</script>
+</head>
+<body>
+	<h1>Exercício 7</h1>
+	
+	<form name="formEmail" action="sucesso.html">
+		Nome: <input type="text" name="nome" id="nome">
+		<input type="submit" onClick="return Criptografar();" value="OK">
+	</form>
+</body>
+</html>

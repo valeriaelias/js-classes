@@ -1,0 +1,86 @@
+﻿<!doctype HTML>
+	<head>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<meta charset="UTF-8">
+<script>
+		$(main);
+		function main(){
+			var Conta = {
+				"nome": "",
+				"saldo": 0,
+				"sacar": function(qt){
+					if(qt<=this.saldo){
+						this.saldo = parseInt(this.saldo) - qt;
+						alert("Saque realizado no valor de R$" + qt);
+					}else{alert("Saldo insuficiente.");}
+				},
+				"depositar": function(qt){
+					if(qt>=10&&qt<=100&&qt%10==0){
+						this.saldo = parseInt(this.saldo) + qt;
+						alert("Depósito realizado no valor de R$" + qt);
+					}else{
+						alert("Não foi possível realizar seu depósito.");
+					}
+				},
+				"checarSaldo": function(){
+					alert("Nome: " + this.nome +" - Saldo: " + this.saldo);
+				}
+			};
+			$("#cadastrar").click(
+				function(){
+					Conta.nome = $("#t1").val();
+					Conta.saldo = parseInt($("#t2").val());
+					$("#cadastrar").css("display","none");
+					$("#t1").css("display","none");
+					$("#sacar").css("display","inline-block");
+					$("#depositar").css("display","inline-block");
+					$("#remover").css("display","inline-block");
+					$("#ver").css("display","inline-block");
+					alert(Conta.nome + " cadastrado com sucesso.")
+				}
+			); 
+			$("#sacar").click(
+				function(){
+					Conta.sacar(parseInt($("#t2").val()));
+				}
+			);
+			$("#depositar").click(
+				function(){
+					Conta.depositar(parseInt($("#t2").val()));
+				}
+			);
+			$("#remover").click(
+				function(){
+					cont = Conta.nome;
+					Conta.nome = "";
+					Conta.saldo = 0;
+					$("#cadastrar").css("display","inline-block");
+					$("#t1").css("display","inline-block");
+					$("#sacar").css("display","none");
+					$("#depositar").css("display","none");
+					$("#remover").css("display","none");
+					$("#ver").css("display","none");
+					alert("Conta de: " + cont + " removida com sucesso!");
+				}
+			);
+			$("#ver").click(
+				function(){
+					Conta.checarSaldo();
+				}
+			);
+		}
+</script>
+</head>
+<body>
+<form id="banco">
+	Nome:<input type="text" id='t1'/>
+	Saldo:<input type="text" id='t2'/>
+</form>
+<button id="cadastrar" style="display:inline-block;">Cadastrar</button>
+
+<button id="sacar" style="display:none;">Sacar</button>
+<button id="depositar" style="display:none;">Depositar</button>
+<button id="ver" style="display:none;">Ver Saldo</button>
+<button id="remover" style="display:none;">Remover conta</button>
+</body>
+</html>

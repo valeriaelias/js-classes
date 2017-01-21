@@ -1,0 +1,45 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script>
+		//Prototype - Prototipagem - Simula uma classe - Atributos e métodos serão replicados para todos os objetos
+		
+		var Retangulo = function(lado1,lado2){ //classe Retangulo com uma função anônima que será o construtor dos atributos lado1 e lado2 recebidos por parametro
+ 			this.lado1 = lado1; //setando o lado1 com o lado1 recebido por parametro 
+			this.lado2 = lado2; //setando o lado2 com o lado2 recebido por parametro 
+		}
+		
+		Retangulo.prototype.calcArea = function(){ //método calcArea que vai calcular a area do retangulo
+			return "Area (" + this.lado1 + " X " + this.lado2 + ") = " + (this.lado1*this.lado2);
+		}
+		
+		Retangulo.prototype.calcPerim = function(){ //método calPerim que vai calcular o perimetro do retangulo
+			return "Perímetro (2x" + this.lado1 + " + 2x" + this.lado2 + ") = " + (parseInt(2*this.lado1)+parseInt(2*this.lado2));
+		}
+		
+	</script>
+</head>
+<body>
+	<script>
+	//Teste
+	
+	$(main);
+		function main(){
+			$("#calc").click(function(){
+				l1 = parseInt($("#l1").val()); //pegando o valor das caixinhas de texto lado1 e lado2
+				l2 = parseInt($("#l2").val());
+				var r = new Retangulo(l1,l2); //Instanciando a classe Retangulo (criando um objeto) e enviando as variaveis l1 e l2 por parametro			
+				alert(r.calcArea()); //chamando o método dentro do alert para que o resultado seja mostrado
+				alert(r.calcPerim());
+			});
+		}	
+	</script>
+	
+	<form>
+		Lado1: <input type="text" name="l1" id="l1"/><br>
+		Lado2: <input type="text" name="l2" id="l2"/><br>
+		<input type="submit" name="submit" id="calc" value="Enviar"/>
+	</form>
+</body>
+</html>

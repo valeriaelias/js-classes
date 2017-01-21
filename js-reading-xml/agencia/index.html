@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  	<title>Jobs4You - Programação Orientada a Objetos</title>
+  	<meta charset="UTF-8">
+  	<link rel="stylesheet" type="text/css" href="../css/css.css">
+	<script src="../js/jquery-min.js"></script>
+	<script src="js/scroo.js"></script>
+	<script>
+		$(main);  // carrega jquery
+		function main(){
+			$("#logCand").click(candidato.logar); // dispara a função no clique do botão
+		}
+	</script>
+</head>
+
+<body>
+  <!-- MENU -->
+    <nav>
+      <ul>
+        <li><a href="../agencia/index.html">Agência de Empregos</a></li>
+        <li><a href="../fibonacci/index.html">Fibonacci</a></li>
+        <li><a href="../index.html">Início</a></li>          
+      </ul>
+    </nav>
+   <!-- // MENU -->
+	
+	<div id="container">
+		<h1>
+	        Jobs4You
+	        <span>Programação Orientada a Objetos</span>
+	    </h1>
+
+		<div class="bl_login">
+			<h2>Login Candidato</h2>
+			<form class="fLogin" name="formi" action="candidato_logado_oo.html" method="get">
+				<p>
+					<label>Login:</label>
+					<input type="text" name="login" id="login" class="campoTexto" style="width: 180px;">
+				</p>
+				<p>
+					<label>Senha:</label>
+					<input type="password" name="senha" id="senha" class="campoTexto" style="width: 120px;">
+				</p>
+				<input type="hidden" name="i" id="i">
+				<input type="submit" value="Entrar" class="btForm" id="logCand">
+			</form>
+			<p><a href="candidato_cad_oo.html" class="qBt qBt3">Candidato, faça agora o seu CADASTRO</a></p>
+		</div>
+		
+		
+		<div class="clearfix"></div>
+	</div>
+	
+	<!-- RODAPE -->
+	<footer>
+	    <p><strong>TP Engenharia de Software</strong></p>
+	    <p>
+	      <em>Alunos:</em><br>
+	      Hewerton Ribeiro<br>
+	      Ely Assumpção<br>
+	      Valéria Chaves<br>
+	      Vanessa Fortuna
+	    </p>
+  	</footer>
+  	<!-- // RODAPE -->
+</body>
+</html>

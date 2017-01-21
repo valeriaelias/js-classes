@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  	<title>Fibonacci - Programação Orientada a Objetos</title>
+  	<meta charset="UTF-8">
+  	<link rel="stylesheet" type="text/css" href="../css/css.css">
+	<script src="../js/jquery-min.js"></script>
+  	<script>
+		var Fibo={
+			"num":0,
+			"lista":"",
+	        "anterior":0,
+	        "daVez":1,
+	        "resultado":1,
+			
+			"CalcularFibo":function(){
+				var start = window.performance.now();
+
+				var num=document.forms.fibo.num.value;
+
+	 if (num == "") {
+        alert("Digite um valor");
+        document.getElementById("num").focus(); 
+        return false;
+      } else {
+        if (! $.isNumeric(num)) {
+          alert("O valor informado deve ser um número"); 
+          document.getElementById("num").focus(); 
+          return false;
+        } else {
+          num = parseInt(num);
+          if (num <= 0 || num > 199) {
+            alert("Digite um número entre 1 e 199"); 
+            document.getElementById("num").focus(); 
+            return false;
+          }
+        }
+      }
+				
+				for (var i = 1; i <= num; i++) {
+					this.lista = this.lista + "<span>" + this.resultado + "</span>" + " > ";
+					this.resultado = this.daVez + this.anterior;
+					this.anterior = this.daVez;
+					this.daVez = this.resultado;
+				}
+				document.getElementById("mostraFibo").innerHTML = "<h2>Resultado Sequencia Fibonacci</h2>" + this.lista;
+
+				var end = window.performance.now();
+				 var time = parseFloat(end - start)/1000;			
+				document.getElementById("mostraTime").innerHTML = "<h3>Tempo de Execução:</h3>" + time 
++ " seg";
+			}	
+		};
+	</script>
+</head>
+
+<body>
+	<!-- MENU -->
+    <nav>
+      <ul>
+        <li><a href="../agencia/index.html">Agência de Empregos</a></li>
+        <li><a href="../fibonacci/index.html">Fibonacci</a></li>
+        <li><a href="../index.html">Início</a></li>          
+      </ul>
+    </nav>
+   <!-- // MENU -->
+
+
+	<div id="container">
+		<h1>
+	        Fibonacci
+	        <span>Programação Orientada a Objetos</span>
+	    </h1>
+
+	    <form name="fibo">
+	    	<p>
+	        Qual a quantidade de números desejados na sequência fibonacci?
+	    	   <input type="text" name="num" id="num" class="campoTexto" style="width: 80px;">
+	      	</p>
+	    	<input type="button" value="mostrar" onclick="Fibo.CalcularFibo();" class="btForm">
+	    </form>
+	    <br><hr><br>
+	    <div id="mostraFibo"></div>
+	    <br>
+	    <div id="mostraTime"></div>
+	</div>
+
+
+	<!-- RODAPE -->
+	<footer>
+	    <p><strong>TP Engenharia de Software</strong></p>
+  	</footer>
+  	<!-- // RODAPE -->
+
+</body>
+</html>

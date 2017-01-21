@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  	<title>Área do Candidato | Jobs4You - Programação Orientada a Objetos</title>
+  	<meta charset="UTF-8">
+  	<link rel="stylesheet" type="text/css" href="../css/css.css">
+	<script src="../js/jquery-min.js"></script>
+	<script src="js/scroo.js"></script>
+	<script>
+		$(main);  // carrega jquery
+		function main(){
+			$("#quadroDados").html(candidato.mostrarDados);
+			manipulaTags();
+			$("#buscaVaga").click(function(){
+				$("#mostraVagas").html(vagas.buscar);
+			});
+		}
+	</script>
+</head>
+
+<body>
+  <!-- MENU -->
+    <nav>
+      <ul>
+        <li><a href="../agencia/index.html">Agência de Empregos</a></li>
+        <li><a href="../fibonacci/index.html">Fibonacci</a></li>
+        <li><a href="../index.html">Início</a></li>          
+      </ul>
+    </nav>
+   <!-- // MENU -->
+	
+	<div id="container">
+		<span class="btSair"><a href="agencia_oo.html">X Sair</a></span>
+
+		<h1>
+	        Área do Candidato
+	        <span>Jobs4You - POO</span>
+	    </h1>
+
+	    <div id="quadroDados">
+		    <p>
+		    	<strong>Fulano</strong> logado<br>
+		    	<a href="">Ver dados</a>
+		    </p>
+		</div>
+
+		<br>
+	    <h2>Vagas Inscritas</h2>
+
+	    <table>
+	    	<tr>
+	    		<th>Descrição</th>
+	    		<th>Salário</th>
+	    		<th>Local</th>
+	    		<th>Data da Inscrição</th>
+	    	</tr>
+
+	    	<tr>
+	    		<td>Recrutar e capacitar novos e antigos funcionários</td>
+	    		<td>3.000,00</td>
+	    		<td>Santos</td>
+	    		<td>28/10/2014</td>
+	    	</tr>
+
+	    	<tr>
+	    		<td>Cadastrar clientes</td>
+	    		<td>2.000,00</td>
+	    		<td>Santos</td>
+	    		<td>25/10/2014</td>
+	    	</tr>
+	    </table>
+
+	    <br><br>
+
+	    <h2>Buscar Vagas</h2>
+	    <form ation="">
+	    	<p>
+				Profissão:<br>
+				<select name="profissao" id="profissao" class="campoTexto" style="width: 330px;">	
+				  <option value="1">Cartógrafo</option>
+				  <option value="2">Assitente Social</option>
+				  <option value="3">Psicólogo</option>
+				  <option value="4">Atendente</option>
+				  <option value="5">Secretária Bilíngue</option>
+				  <option value="6">Geólogo</option>
+				</select>
+				<input type="button" value="buscar" class="btForm" id="buscaVaga" style="padding: 2px 50px; margin-top:8px;">
+			</p>
+		</form>
+
+	    <br><hr><br>
+	    <div id="mostraVagas"></div>
+  </div>
+	
+	<!-- RODAPE -->
+	<footer>
+	    <p><strong>TP Engenharia de Software</strong></p>
+	    <p>
+	      <em>Alunos:</em><br>
+	      Hewerton Ribeiro<br>
+	      Ely Assumpção<br>
+	      Valéria Chaves<br>
+	      Vanessa Fortuna
+	    </p>
+  	</footer>
+  	<!-- // RODAPE -->
+</body>
+</html>

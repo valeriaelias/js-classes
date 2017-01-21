@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+<head>
+	<script>
+		function recebeVetor(a,b) {
+			if (a.length == b.length) {
+				for (var i in a) {
+					document.write("<tr><td>" + a[i] + "</td><td>" + b[i] + "</td></tr>");
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+	<h1>Exercício 4</h1>
+	
+	<table border=1 style="text-align:center;">
+		<tr><th>ID</th><th>Índice</th></tr>
+		<script>recebeVetor(["01","02","03","04"],["maça","pera","banana","uva"]);</script>
+	</table>
+</body>
+</html>

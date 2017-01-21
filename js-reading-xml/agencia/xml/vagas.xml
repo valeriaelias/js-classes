@@ -1,0 +1,44 @@
+<vagas>
+	<vaga>
+		<descrvaga>Desenhar mapas</descrvaga>
+		<localvaga>Santos</localvaga>
+		<salariovaga>5.000,00</salariovaga>
+		<codempresa>1</codempresa>
+		<codprofissao>1</codprofissao>	
+	</vaga>
+	<vaga>
+		<descrvaga>Assistir menores de idade do educandário</descrvaga>
+		<localvaga>Santos</localvaga>
+		<salariovaga>7.000,00</salariovaga>
+		<codempresa>3</codempresa>
+		<codprofissao>2</codprofissao>	
+	</vaga>
+	<vaga>
+		<descrvaga>Recrutar e capacitar novos e antigos funcionários</descrvaga>
+		<localvaga>Santos</localvaga>
+		<salariovaga>2.800,00</salariovaga>
+		<codempresa>3</codempresa>
+		<codprofissao>3</codprofissao>	
+	</vaga>
+	<vaga>
+		<descrvaga>Atendimento a clientes da farmácia</descrvaga>
+		<localvaga>Santos</localvaga>
+		<salariovaga>1.500,00</salariovaga>
+		<codempresa>3</codempresa>
+		<codprofissao>4</codprofissao>	
+	</vaga>
+	<vaga>
+		<descrvaga>Recepcionar executivos estrangeiros</descrvaga>
+		<localvaga>Santos</localvaga>
+		<salariovaga>3.800,00</salariovaga>
+		<codempresa>3</codempresa>
+		<codprofissao>5</codprofissao>	
+	</vaga>
+	<vaga>
+		<descrvaga>Pesquisar os relevos</descrvaga>
+		<localvaga>Santos</localvaga>
+		<salariovaga>3.800,00</salariovaga>
+		<codempresa>3</codempresa>
+		<codprofissao>1</codprofissao>	
+	</vaga>
+</vagas>
